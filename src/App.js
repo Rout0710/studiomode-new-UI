@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Button from "./components/Button";
+import ConfigurationPopup from "./components/ConfigurationPopup";
 
 function App() {
+  const [showPopup, setShowPopUp] = useState(false);
+
+  const showConfigPopup = () => {
+    setShowPopUp(true)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex items-center justify-center bg-black h-[100vh] w-[100vw]">
+      <div className="flex items-center justify-center relative">
+        <div className="bg-white w-[700px] h-[500px]">
+         </div>
+        <Button buttonfunction={showConfigPopup} buttonclass={'absolute pt-[15px] pb-[15px] pl-[25px] pr-[25px] flex items-center justify-center bg-black  bottom-[10px] right-[10px] w-[90px] h-[25px] cursor-pointer rounded-[50px]'}  buttontext={'Customise'} buttontextclass ={'text-white text-sm'}/>
+      </div>
+      {showPopup ? (
+        <ConfigurationPopup/>
+      ) : null}
     </div>
   );
 }
