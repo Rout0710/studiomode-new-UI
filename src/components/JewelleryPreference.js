@@ -1,9 +1,13 @@
+import { FaCaretLeft } from "react-icons/fa"
+import { FaCaretRight } from "react-icons/fa"
+
 export default function JewelleryPreference() {
   return (
     <div className="w-full flex flex-col gap-[25px]">
       <div className="flex flex-col gap-[10px] border-b-2 border-solid border-[#C0C0C0] pb-[24px]">
         <p>Natural Gemstone Quality </p>
-        <div className="flex justify-around w-[90%] m-auto">
+        <div className="flex justify-around w-[90%] m-auto relative">
+        <FaCaretLeft className="flex absolute self-center	justify-self-center	-left-[13px]"/>
           <div className="p-[10px] text-center  flex flex-col justify-center items-center flex flex-col border rounded shadow-[0_0_2px_2px_rgba(0,0,0,0.3)]">
             <img
               className="p-[5px]"
@@ -32,11 +36,13 @@ export default function JewelleryPreference() {
             ></img>
             <p>Heirloom</p>
           </div>
+          <FaCaretRight className="flex absolute self-center justify-self-center	right-[0px]"/>
         </div>
       </div>
       <div className="flex flex-col gap-[10px] border-b-2 border-solid border-[#C0C0C0] pb-[24px] ">
       <p>Total Carat Weight </p>
-        <div className="flex justify-around w-[90%] m-auto">
+        <div className="flex justify-around w-[90%] m-auto relative">
+        <FaCaretLeft className="flex absolute self-center	justify-self-center	-left-[13px]"/>
           <div className="p-[10px] text-center flex flex-col justify-center items-center">
             <img
               className="p-[5px]"
@@ -58,11 +64,13 @@ export default function JewelleryPreference() {
             ></img>
             <p>1.50 carrat</p>
           </div>
+          <FaCaretRight className="flex absolute self-center justify-self-center	right-[0px]"/>
         </div>
       </div>
       <div className="flex flex-col gap-[10px]  border-solid border-[#C0C0C0] pb-[24px] ">
       <p>Metal type </p>
-        <div className="flex justify-around w-[90%] m-auto">
+        <div className="flex justify-around w-[90%] m-auto relative">
+        <FaCaretLeft className="flex absolute self-center	justify-self-center	-left-[13px]"/>
           <div className="p-[10px] text-center flex flex-col justify-center items-center">
             <img
               className="p-[5px]"
@@ -84,6 +92,7 @@ export default function JewelleryPreference() {
             ></img>
             <p>Yellow gold</p>
           </div>
+          <FaCaretRight className="flex absolute self-center justify-self-center	right-[0px]"/>
         </div>
       </div>
     </div>
